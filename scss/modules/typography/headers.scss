@@ -1,12 +1,30 @@
 h1, h2, h3, h4, h5, h6 {
     margin: 0 0 ($bit * 3);
+    color: color(dark-gray);
     font-family: $font-family-header;
     font-weight: font-weight(medium);
-    letter-spacing: -0.02em;
+    letter-spacing: rem-calc(-1);
+    line-height: 1.1;
 }
 
-@for $i from 6 through 1 {
+@for $i from 6 through 2 {
     h#{7 - $i} {
-        font-size: rem-calc(24) + rem-calc(8 * $i / 2);
+        font-size: rem-calc(18) + rem-calc(8 * $i / 2);
+        @include breakpoint(medium) {
+            font-size: rem-calc(22) + rem-calc(8 * $i / 2);
+        }
+        @include breakpoint(large) {
+            font-size: rem-calc(28) + rem-calc(8 * $i / 2);
+        }
+    }
+}
+
+h1 {
+    font-size: rem-calc(18) + rem-calc(8 * 5 / 2);
+    @include breakpoint(medium) {
+        font-size: rem-calc(22) + rem-calc(8 * 5 / 2);
+    }
+    @include breakpoint(large) {
+        font-size: rem-calc(28) + rem-calc(8 * 5 / 2);
     }
 }
