@@ -1,0 +1,55 @@
+.advantages {
+    padding: ($bit * 15) ($bit * 4) ($bit * 16);
+    background-color: color(light-purple);
+}
+
+.advantages__header {
+    margin-bottom: $bit * 8;
+    text-align: center;
+    color: color(black);
+}
+
+.advantages__item {
+    @include breakpoint(small down) {
+        &:not(:last-child) {
+            margin-bottom: $bit * 4;
+        }
+    }
+}
+
+.advantages__ico {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: rem-calc(64);
+    margin-bottom: $bit * 3;
+}
+
+.advantages__title {
+    position: relative;
+    margin-bottom: rem-calc(50);
+    color: color(black);
+    font-size: rem-calc(20);
+    font-weight: bold;
+    letter-spacing: normal;
+
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: rem-calc(-24);
+        display: block;
+        width: rem-calc(24);
+        height: rem-calc(2);
+        background-color: color(primary);
+    }
+}
+
+.advantages__text {
+    > *:last-child {
+        margin-bottom: 0;
+    }
+    @include breakpoint(medium) {
+        padding-right: $bit * 3;
+    }
+}
