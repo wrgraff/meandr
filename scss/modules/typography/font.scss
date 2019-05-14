@@ -1,4 +1,6 @@
 $font-family: 'Roboto';
+$font-family-header: 'DINPro';
+$font-family-button: 'Gilroy';
 @mixin font-face($font-family, $file-path, $font-weight, $font-style) {
     @font-face {
         font-family: $font-family;
@@ -15,5 +17,6 @@ $font-family: 'Roboto';
 }
 
 @include font-face($font-family, '../fonts/roboto/roboto-regular', 400, normal);
-@include font-face($font-family, '../fonts/roboto/roboto-medium', 500, normal);
 @include font-face($font-family, '../fonts/roboto/roboto-bold', 700, normal);
+@include font-face($font-family-header, '../fonts/dinpro/DINPro', 700, normal);
+@include font-face($font-family-button, '../fonts/gilroy/Gilroy-ExtraBold', 800, normal);
