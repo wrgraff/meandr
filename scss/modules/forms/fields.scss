@@ -1,0 +1,87 @@
+.input {
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
+    margin-bottom: rem-calc(46);
+
+    &::before {
+        counter-increment: form;
+        content: counter(form);
+        position: absolute;
+        @each $name, $size in $columns-gutter {
+            @include breakpoint($name) {
+                right: calc(102% + #{$size / 2});
+            }
+        }
+        top: 0;
+        display: block;
+        width: rem-calc(64);
+        height: rem-calc(64);
+        line-height: rem-calc(64);
+        color: color(primary);
+        border: 1px solid rgba(white, .23);
+        border-radius: 50%;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+.input__text {
+    display: block;
+    padding: rem-calc(20 0);
+    font-family: $font-family-header;
+    letter-spacing: rem-calc(-.16);
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        height: rem-calc(2);
+        background-color: #f7f8fa;
+        opacity: .1;
+        transform-origin: 0 0;
+    }
+    &::after {
+        opacity: .3;
+        transform: scaleX(0);
+        transition: transform 200ms cubic-bezier(0.165, 0.84, 0.44, 1),
+                    opacity 200ms ease-in-out,
+                    background-color 200ms ease-in-out;
+    }
+
+    .input:hover & {
+        &::after {
+            transform: scaleX(1);
+        }
+    }
+    .input__field:focus + & {
+        &::after {
+            transform: scaleX(1);
+            opacity: 1;
+            background-color: color(primary);
+        }
+    }
+}
+
+.input__field {
+    position: relative;
+    width: 100%;
+    padding: rem-calc(4 0 16);
+    color: white;
+    background-color: transparent;
+    border: none;
+    font-family: $font-family;
+    font-size: rem-calc(24);
+    line-height: 1.4;
+
+    &::placeholder {
+        color: white;
+        opacity: .3;
+        letter-spacing: rem-calc(-.24);
+    }
+}

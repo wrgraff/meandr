@@ -131,14 +131,29 @@
 
         <footer class="page-footer">
             <div class="grid grid_justify_center">
-                <div class="small-12 medium-10 large-8 columns">
+                <div class="small-10 medium-8 large-6 columns">
                     <div class="page-footer__header">
                         <h4>Теперь расскажите о&nbsp;себе</h4>
                     </div>
                     <form action="" class="page-footer__form">
                         <label class="input">
+                            <input type="text" name="name" required class="input__field" placeholder="Сидоров Александр" />
                             <span class="input__text">Фамилия и имя</span>
-                            <input type="text" name="" required class="input__field" placeholder="Сидоров Александр" />
+                        </label>
+
+                        <label class="input">
+                            <input type="email" name="email" required class="input__field" placeholder="Sidorov@yandex.ru" />
+                            <span class="input__text">Электронная почта</span>
+                        </label>
+
+                        <label class="input">
+                            <input type="tel" name="phone" class="input__field" placeholder="+7 (999)-328-14-20" />
+                            <span class="input__text">Телефон</span>
+                        </label>
+
+                        <label class="input">
+                            <textarea name="text" rows="2" required class="input__field" placeholder="Свой проект по созданию универсальной инфраструктуры строительства"></textarea>
+                            <span class="input__text">Какой деятельностью, не&nbsp;связанной с&nbsp;текущими проектами, вы&nbsp;бы хотели заниматься в&nbsp;рабочее время?</span>
                         </label>
                     </form>
                 </div>

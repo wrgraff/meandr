@@ -1,3 +1,19 @@
 .page-footer {
     margin-top: auto;
+    padding: ($bit * 13) ($bit * 4) ($bit * 16);
+    color: white;
+    background-color: color(footer);
+
+    h1, h2, h3, h4, h5, h6 {
+        color: white;
+    }
+}
+
+.page-footer__header {
+    margin-bottom: $bit * 8;
+    text-align: center;
+}
+
+.page-footer__form {
+    counter-reset: form;
 }
