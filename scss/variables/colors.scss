@@ -1,12 +1,12 @@
 $colors: (
-    primary: #0B3FD1,
-    secondary: #ff5555,
+    primary: #f47821,
     success: #43A047,
-    white: #fff,
-    light-gray: #f5f5f5,
-    medium-gray: #BDBDBD,
-    dark-gray: #616161,
+    light-purple: #f7f5fa,
+    light-gray: #ededed,
+    medium-gray: #878787,
+    dark-gray: #222,
     black: #000,
+    text: #4e4d53,
 );
 
 @function color($name) {
