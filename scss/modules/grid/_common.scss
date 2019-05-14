@@ -1,0 +1,76 @@
+$columns-number: 12;
+$columns-gutter: (
+    small: rem-calc(12),
+    medium: rem-calc(16),
+    large: rem-calc(20),
+);
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: $global-width;
+    margin: 0 auto;
+
+    .columns & {
+        @each $name, $size in $columns-gutter {
+            @include breakpoint($name) {
+                margin: 0 ($size / -2);
+            }
+        }
+    }
+}
+.grid_align_center {
+    align-items: center;
+}
+.grid_align_end {
+    align-items: flex-end;
+}
+.grid_justify_center {
+    justify-content: center;
+}
+.grid_justify_between {
+    justify-content: space-between;
+}
+.grid_justify_end {
+    justify-content: flex-end;
+}
+
+.columns {
+    flex: 0px 1 1;
+    max-width: $global-width;
+
+    @each $name, $size in $columns-gutter {
+        @include breakpoint($name) {
+            padding: 0 ($size / 2);
+        }
+    }
+}
+
+@each $name, $size in $breakpoints {
+    @include breakpoint($name) {
+        .#{$name}- {
+            @for $i from 1 through $columns-number {
+                &#{$i} {
+                    flex: (100% / $columns-number * $i) 0 0;
+                    max-width: (100% / $columns-number * $i);
+                }
+            }
+
+            &shrink {
+                flex: 0px 0 0;
+            }
+        }
+    }
+}
+
+@each $name, $size in $breakpoints {
+    @include breakpoint($name only) {
+        .order-#{$name}- {
+            @for $i from 1 through 6 {
+                &#{$i} {
+                    order: $i;
+                }
+            }
+        }
+    }
+}
