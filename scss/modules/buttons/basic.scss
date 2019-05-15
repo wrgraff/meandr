@@ -19,6 +19,7 @@
         background-color: color(light-gray);
     }
     &:focus {
+        outline: none;
         box-shadow: 0 0 0 rem-calc(4) color(footer),
                     0 0 0 rem-calc(8) rgba(color(primary), .5);
     }
