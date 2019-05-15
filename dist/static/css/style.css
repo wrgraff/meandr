@@ -820,27 +820,36 @@ img {
     right: calc(102% + 0.375rem);
     top: 0;
     display: block;
-    width: 4rem;
-    height: 4rem;
-    line-height: 4rem;
     color: #f47821;
     border: 1px solid rgba(255, 255, 255, 0.23);
     border-radius: 50%;
-    font-size: 1.25rem;
     font-weight: 500;
-    text-align: center; }
+    text-align: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.125rem; }
     @media print, screen and (min-width: 40em) {
       .input::before {
         right: calc(102% + 0.5rem); } }
     @media print, screen and (min-width: 64em) {
       .input::before {
         right: calc(102% + 0.625rem); } }
+    @media print, screen and (min-width: 40em) {
+      .input::before {
+        width: 4rem;
+        height: 4rem;
+        line-height: 4rem;
+        font-size: 1.25rem; } }
 
 .input__text {
   display: block;
-  padding: 1.25rem 0;
+  padding: 0.5rem 0;
   font-family: "DINPro";
   letter-spacing: -0.01rem; }
+  @media print, screen and (min-width: 40em) {
+    .input__text {
+      padding: 1.25rem 0; } }
   .input__text::before, .input__text::after {
     content: '';
     position: absolute;
@@ -878,8 +887,11 @@ img {
   background-color: transparent;
   border: none;
   font-family: "Roboto";
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   line-height: 1.4; }
+  @media print, screen and (min-width: 40em) {
+    .input__field {
+      font-size: 1.5rem; } }
   .input__field::-webkit-input-placeholder {
     color: white;
     opacity: .3;
