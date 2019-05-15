@@ -138,22 +138,22 @@
                     <form action="#" class="page-footer__form form" id="form" data-validate>
                         <div class="form__body">
                             <label class="input">
-                                <input type="text" name="name" required class="input__field" placeholder="Сидоров Александр" />
+                                <input type="text" name="name" required class="input__field" placeholder="Сидоров Александр" data-validate-pattern="text" />
                                 <span class="input__text">Фамилия и имя</span>
                             </label>
 
                             <label class="input">
-                                <input type="email" name="email" required class="input__field" placeholder="Sidorov@yandex.ru" />
+                                <input type="email" name="email" required class="input__field" placeholder="Sidorov@yandex.ru" data-validate-pattern="email" />
                                 <span class="input__text">Электронная почта</span>
                             </label>
 
                             <label class="input">
-                                <input type="tel" name="phone" class="input__field" placeholder="+7 (999)-328-14-20" />
+                                <input type="tel" name="phone" class="input__field" placeholder="+7 (999)-328-14-20" data-validate-pattern="phone" />
                                 <span class="input__text">Телефон</span>
                             </label>
 
                             <label class="input">
-                                <textarea name="text" rows="2" required class="input__field" placeholder="Свой проект по созданию универсальной инфраструктуры строительства"></textarea>
+                                <textarea name="text" rows="2" required class="input__field" placeholder="Свой проект по созданию универсальной инфраструктуры строительства" data-validate-length="10"></textarea>
                                 <span class="input__text">Какой деятельностью, не&nbsp;связанной с&nbsp;текущими проектами, вы&nbsp;бы хотели заниматься в&nbsp;рабочее время?</span>
                             </label>
                         </div>
@@ -166,6 +166,9 @@
             </div>
         </footer>
     </div>
+    <script src="/static/js/app.js">
+
+    </script>
 </body>
 <!-- Developed by Artur Trifonov frontend-design.ru -->
 </html>

@@ -77,6 +77,20 @@
             background-color: color(primary);
         }
     }
+
+    .input__field_status_valid + & {
+        &::after {
+            transform: scaleX(1);
+            background-color: color(success);
+        }
+    }
+    .input__field_status_invalid + & {
+        &::after {
+            transform: scaleX(1);
+            opacity: 1;
+            background-color: color(error);
+        }
+    }
 }
 
 .input__field {
@@ -93,9 +107,26 @@
     }
     line-height: 1.4;
 
+    &:invalid {
+        outline: none;
+        box-shadow: none;
+    }
     &::placeholder {
         color: white;
         opacity: .3;
         letter-spacing: rem-calc(-.24);
+    }
+}
+
+.input__error {
+    position: absolute;
+    top: 100%;
+    color: color(error);
+    opacity: 0;
+    font-size: rem-calc(14);
+    transition: opacity 200ms ease-in-out;
+
+    .input__field_status_invalid ~ & {
+        opacity: 1;
     }
 }
