@@ -1,5 +1,8 @@
 .page-header {
-    padding: ($bit * 21) ($bit * 4) ($bit * 16);
+    padding: ($bit * 14) ($bit * 4) ($bit * 10);
+    @include breakpoint(medium) {
+        padding: ($bit * 21) ($bit * 4) ($bit * 16);
+    }
     text-align: center;
 }
 

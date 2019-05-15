@@ -42,7 +42,8 @@
 .about__title {
     margin-bottom: rem-calc(16);
     color: color(primary);
-    font-size: font-size(small);
+    font-size: rem-calc(12);
+    font-weight: bold;
     text-transform: uppercase;
     letter-spacing: rem-calc(.48);
 }

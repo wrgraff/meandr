@@ -1,6 +1,9 @@
 .page-footer {
     margin-top: auto;
-    padding: ($bit * 13) ($bit * 4) ($bit * 16);
+    padding: ($bit * 9) ($bit * 4) ($bit * 16);
+    @include breakpoint(medium) {
+        padding: ($bit * 13) ($bit * 4) ($bit * 16);
+    }
     color: white;
     background-color: color(footer);
 
