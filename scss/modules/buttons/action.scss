@@ -55,6 +55,7 @@ $action-button-size: rem-calc(54);
         }
     }
     &:focus {
+        outline: none;
         box-shadow: 0 0 0 rem-calc(4) white,
                     0 0 0 rem-calc(8) rgba(color(primary), .5);
     }
