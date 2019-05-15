@@ -2,9 +2,11 @@ $action-button-size: rem-calc(54);
 
 .action-button {
     position: relative;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     min-height: $action-button-size;
     padding: rem-calc(8 30 8 46);
+    color: color(black);
     background-color: transparent;
     border: none;
     border-radius: $action-button-size;
@@ -13,6 +15,7 @@ $action-button-size: rem-calc(54);
     line-height: 1;
     font-weight: 800;
     text-transform: uppercase;
+    text-decoration: none;
     letter-spacing: rem-calc(.32);
     box-shadow: 0 0 0 rem-calc(4) white,
                 0 0 0 rem-calc(8) rgba(color(primary), 0);

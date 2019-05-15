@@ -119,14 +119,6 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1.65; }
 
-html {
-  background-image: url(../../../Meandr.png);
-  background-position: center top;
-  background-repeat: no-repeat; }
-
-body {
-  background-color: rgba(255, 0, 0, 0.3); }
-
 *,
 *::before,
 *::after {
@@ -714,9 +706,15 @@ img {
 
 .action-button {
   position: relative;
-  display: inline-block;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   min-height: 3.375rem;
   padding: 0.5rem 1.875rem 0.5rem 2.875rem;
+  color: #000;
   background-color: transparent;
   border: none;
   border-radius: 3.375rem;
@@ -725,6 +723,7 @@ img {
   line-height: 1;
   font-weight: 800;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: 0.02rem;
   -webkit-box-shadow: 0 0 0 0.25rem white, 0 0 0 0.5rem rgba(244, 120, 33, 0);
   box-shadow: 0 0 0 0.25rem white, 0 0 0 0.5rem rgba(244, 120, 33, 0);
