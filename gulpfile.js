@@ -27,7 +27,7 @@ gulp.task('js', function() {
         .pipe(include())
         .pipe(uglify())
         .on('error', console.log)
-        .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('dist/static/js'))
         .pipe(livereload());
 });
 
