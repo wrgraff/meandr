@@ -4,8 +4,7 @@ $action-button-size: rem-calc(54);
     position: relative;
     display: inline-flex;
     align-items: center;
-    min-height: $action-button-size;
-    padding: rem-calc(8 30 8 46);
+    padding: rem-calc(19 30 19 46);
     color: color(dark-gray);
     background-color: transparent;
     border: none;
@@ -17,6 +16,7 @@ $action-button-size: rem-calc(54);
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: rem-calc(.32);
+    white-space: nowrap;
     box-shadow: 0 0 0 rem-calc(4) white,
                 0 0 0 rem-calc(8) rgba(color(primary), 0);
     overflow: hidden;

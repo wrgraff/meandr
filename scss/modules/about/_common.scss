@@ -23,6 +23,8 @@
 }
 
 .about__list {
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-wrap: wrap;
     margin: 0;
@@ -33,9 +35,12 @@
 
 .about__item {
     flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
     padding: rem-calc(40 50 50);
     @include breakpoint(medium) {
         flex-basis: 50%;
+        max-width: 50%;
         padding: rem-calc(50 60 60);
     }
     border: 1px solid color(light-gray);
