@@ -5,12 +5,14 @@
 
 .about__img {
     display: flex;
-    max-height: rem-calc(600);
+    max-height: rem-calc(240);
     margin-bottom: rem-calc(-20);
     @include breakpoint(medium) {
+        max-height: rem-calc(400);
         margin-bottom: rem-calc(-60);
     }
     @include breakpoint(large) {
+        max-height: rem-calc(600);
         margin-bottom: rem-calc(-100);
     }
 
@@ -42,8 +44,7 @@
 .about__title {
     margin-bottom: rem-calc(16);
     color: color(primary);
-    font-size: rem-calc(12);
-    font-weight: bold;
+    font-size: font-size(small);
     text-transform: uppercase;
     letter-spacing: rem-calc(.48);
 }
